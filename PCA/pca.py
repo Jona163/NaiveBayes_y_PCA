@@ -52,3 +52,13 @@ if __name__ == "__main__":
     data = datasets.load_iris()
     X = data.data
     y = data.target
+
+
+
+    # Project the data onto the 2 primary principal components
+    pca = PCA(2)
+    pca.fit(X)
+    X_projected = pca.transform(X)
+
+    print("Shape of X:", X.shape)
+    print("Shape of transformed X:", X_projected.shape)
