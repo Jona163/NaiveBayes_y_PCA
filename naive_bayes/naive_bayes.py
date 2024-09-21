@@ -22,3 +22,11 @@ class NaiveBayes:
             self._mean[idx, :] = X_c.mean(axis=0)
             self._var[idx, :] = X_c.var(axis=0)
             self._priors[idx] = X_c.shape[0] / float(n_samples)
+
+
+    def predict(self, X):
+        y_pred = [self._predict(x) for x in X]
+        return np.array(y_pred)
+
+    def _predict(self, x):
+        posteriors = []
