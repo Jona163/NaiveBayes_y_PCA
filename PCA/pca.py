@@ -62,3 +62,8 @@ if __name__ == "__main__":
 
     print("Shape of X:", X.shape)
     print("Shape of transformed X:", X_projected.shape)
+
+    x1 = X_projected[:, 0]
+    x2 = X_projected[:, 1]
+
+    plt.scatter(
