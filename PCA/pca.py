@@ -67,3 +67,5 @@ if __name__ == "__main__":
     x2 = X_projected[:, 1]
 
     plt.scatter(
+         x1, x2, c=y, edgecolor="none", alpha=0.8, cmap=plt.cm.get_cmap("viridis", 3)
+    )
