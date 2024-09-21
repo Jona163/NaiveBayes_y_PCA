@@ -40,3 +40,15 @@ class PCA:
         X = X - self.mean
         return np.dot(X, self.components.T)
 
+
+
+# Testing
+if __name__ == "__main__":
+    # Imports
+    import matplotlib.pyplot as plt
+    from sklearn import datasets
+
+    # data = datasets.load_digits()
+    data = datasets.load_iris()
+    X = data.data
+    y = data.target
