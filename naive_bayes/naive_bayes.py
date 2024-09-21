@@ -30,3 +30,11 @@ class NaiveBayes:
 
     def _predict(self, x):
         posteriors = []
+
+
+        # calculate posterior probability for each class
+        for idx, c in enumerate(self._classes):
+            prior = np.log(self._priors[idx])
+            posterior = np.sum(np.log(self._pdf(idx, x)))
+            posterior = posterior + prior
+            posteriors.append(posterior)
