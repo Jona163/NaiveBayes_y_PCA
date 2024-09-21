@@ -38,3 +38,7 @@ class NaiveBayes:
             posterior = np.sum(np.log(self._pdf(idx, x)))
             posterior = posterior + prior
             posteriors.append(posterior)
+
+
+        # return class with the highest posterior
+        return self._classes[np.argmax(posteriors)]
